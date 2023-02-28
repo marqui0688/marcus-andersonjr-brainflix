@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="styelsheet" href="./styles.css" />
     <title>Brainflix</title>
   </head>
   <body>
-    <header></header>
+    <!-------HEADER------->
+    <header class="header">
+      <img
+        class="header__logo"
+        src="./assets/Images/Logo/BrainFlix-logo.svg"
+        alt="Brainflix-logo"
+      />
+      <!--SEARCH BAR-->
+
+      <div class="search-wrapper">
+        <input
+          class="search-wrapper__bar"
+          type="text"
+          name="searchbar"
+          placeholder="Search"
+          src="./assets/Images/Icons/search.svg"
+        />
+        <img
+          src="./assets/Images/Mohan-muruge.jpg"
+          alt="avatar"
+          class="search-wrapper__avatar"
+        />
+      </div>
+
+      <!--UPLOAD BUTTON-->
+      <button class="upload-button">UPLOAD</button>
+    </header>
   </body>
 </html>
