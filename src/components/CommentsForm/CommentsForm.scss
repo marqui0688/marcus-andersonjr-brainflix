@@ -4,17 +4,45 @@
   &__header {
     font-size: 0.8rem;
     color: #afafaf;
+    margin-top: 1.5rem;
   }
 
   &__avatar {
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 70%;
     object-fit: cover;
+    margin-left: 1rem;
+  }
+  &__btn {
+    width: 70%;
+    height: 2.2rem;
+    background-color: #0095ff;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    background-image: url(../../assets/Images/Icons/add_comment.svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    border-width: thin;
+    font-size: 0.8rem;
+    margin-left: 2rem;
   }
 }
+
 .form-header {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #afafaf;
   text-align: left;
+  margin-bottom: 0;
+  margin-left: 4rem;
+}
+
+.form-container__input {
+  width: 70%;
+  height: 6rem;
+  border: solid 1px #afafaf;
+  border-radius: 0.2rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
