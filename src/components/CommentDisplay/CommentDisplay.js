@@ -15,15 +15,13 @@ function CommentDisplay({ featuredVideoComments }) {
   return featuredVideoComments.map((comment) => {
     return (
       <section className="comment-display__container">
-        <div className="comment-display__block">
-          <div className="comment-display__heading">
-            <img className="comment-display__avatar"></img>
-            <p className="comment-display__name">{comment.name}</p>
-            <p className="comment-dispaly__date">
-              {formatDate(comment.timestamp)}
-            </p>
-            <p>{comment.comment}</p>
-          </div>
+        <div className="comment-display__heading">
+          <div className="comment-display__avatar"></div>
+          <p className="comment-display__name">{comment.name}</p>
+          <p className="comment-display__date">
+            {formatDate(comment.timestamp)}
+          </p>
+          <p className="comment-display__comment">{comment.comment}</p>
         </div>
       </section>
     );

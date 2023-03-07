@@ -8,6 +8,7 @@ import VideoViews from "../src/components/VideoViews/VideoViews";
 import VideoDescription from "./components/VideoDescription/VideoDescription";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
 import CommentDisplay from "./components/CommentDisplay/CommentDisplay";
+import VideoList from "./components/VideoList/VideoList";
 import "./assets/styles/partials/global.scss";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
       <VideoDescription mainVideoDescription={featuredVideo.description} />
       <CommentsForm />
       <CommentDisplay featuredVideoComments={featuredVideo.comments} />
+      <VideoList videoFiles={videoFiles} />
     </div>
   );
 }

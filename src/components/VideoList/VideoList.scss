@@ -1,0 +1,47 @@
+.video-list__subheader {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #afafaf;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+.video-list__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.video-list__wrapper {
+  display: block;
+}
+.video-list__image {
+  //   height: auto;
+  //   max-height: 5rem;
+  //   width: auto;
+  //   max-width: 5rem;
+  //   margin-left: 1rem;
+  //   object-fit: contain;
+  float: left;
+  width: 6.36rem;
+  height: 3.26rem;
+  object-fit: cover;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.4rem;
+}
+.video-list__title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 1rem;
+  width: 20ch;
+  text-align: left;
+  margin-left: 1rem;
+}
+.video-list__author {
+  font-size: 0.8rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+.author-container {
+  display: block;
+}
