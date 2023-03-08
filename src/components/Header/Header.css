@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@media (min-width: 769px) {
+  .header {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    position: relative;
+  }
+}
+.header__logo {
+  height: 3rem;
+  width: 8rem;
+}
+@media (min-width: 769px) {
+  .header__logo {
+    height: 4rem;
+    width: 9rem;
+    margin-top: 0.8rem;
+    margin-left: 1rem;
+  }
+}
+
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.search-wrapper__bar {
+  background-image: url(../../assets/Images/Icons/search.svg);
+  background-position: 5% 50%;
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 65%;
+  border-radius: 0.3rem;
+  border-color: #e1e1e1;
+  border-width: thin;
+  text-indent: 1.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+@media (min-width: 769px) {
+  .search-wrapper__bar {
+    background-image: url(http://localhost:3001/static/media/search.b2de04b….svg);
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 30%;
+    border-radius: 0.3rem;
+    border-color: #e1e1e1;
+    border-width: thin;
+    text-indent: 1.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 17rem;
+    margin-top: 1rem;
+    position: absolute;
+  }
+}
+.search-wrapper__avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 769px) {
+  .search-wrapper__avatar {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 70%;
+    margin-right: 2.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin-top: 1rem;
+    margin-left: 33rem;
+  }
+}
+
+.upload-button {
+  width: 90%;
+  height: 2.5rem;
+  background-color: #0095ff;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  background-image: url(../../assets/Images/Icons/upload.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  border-width: thin;
+}
+@media (min-width: 769px) {
+  .upload-button {
+    width: 25%;
+    height: 3.2rem;
+    position: absolute;
+    right: 6rem;
+    margin-top: 1rem;
+  }
+}/*# sourceMappingURL=Header.css.map */

@@ -11,6 +11,7 @@ import CommentDisplay from "./components/CommentDisplay/CommentDisplay";
 import VideoList from "./components/VideoList/VideoList";
 import "./assets/styles/partials/global.scss";
 
+
 function App() {
   const [featuredVideo, setFeaturedVideo] = useState(videoDetails[0]);
   const [videoList, setVideoList] = useState(videoFiles);

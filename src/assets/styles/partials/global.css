@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+}
+body {
+  font-family: "Avenir", sans-serif;
+}/*# sourceMappingURL=global.css.map */

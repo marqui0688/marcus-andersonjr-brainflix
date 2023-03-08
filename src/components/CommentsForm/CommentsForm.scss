@@ -1,3 +1,6 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
 .form-container {
   display: flex;
 
@@ -13,6 +16,11 @@
     border-radius: 70%;
     object-fit: cover;
     margin-left: 1rem;
+    @include tablet {
+      margin-left: 2rem;
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
   &__btn {
     width: 70%;
@@ -28,6 +36,21 @@
     font-size: 0.8rem;
     margin-left: 2rem;
     margin-bottom: 1rem;
+    @include tablet {
+      width: 20%;
+      height: 2.2rem;
+      background-color: #0095ff;
+      border: none;
+      color: white;
+      border-radius: 0.3rem;
+      background-image: url(http://localhost:3001/static/media/add_comment.26bc7a2….svg);
+      background-position: left;
+      background-repeat: no-repeat;
+      border-width: thin;
+      font-size: 0.8rem;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 
@@ -37,6 +60,9 @@
   text-align: left;
   margin-bottom: 0;
   margin-left: 4rem;
+  @include tablet {
+    margin-left: 5.5rem;
+  }
 }
 
 .form-container__input {
@@ -46,4 +72,13 @@
   border-radius: 0.2rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
+  @include tablet {
+    width: 70%;
+    height: 2.5rem;
+    border: solid 1px #afafaf;
+    border-radius: 0.2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+  }
 }

@@ -1,8 +1,5 @@
-@use "../../assets/styles/partials/mixins" as *;
-@use "../../assets/styles/partials/variables" as *;
-
-.description-container {
-  @include tablet {
+@media (min-width: 769px) {
+  .description-container {
     margin-right: 2rem;
   }
 }
@@ -11,17 +8,22 @@
   font-size: 0.8rem;
   text-align: left;
   margin: 1rem;
-  @include tablet {
+}
+@media (min-width: 769px) {
+  .description-container__text {
     margin-left: 2rem;
     font-size: 1rem;
   }
 }
+
 .description-container__comment {
   font-size: 0.7rem;
   text-align: left;
   font-weight: 600;
   margin-left: 1rem;
-  @include tablet {
+}
+@media (min-width: 769px) {
+  .description-container__comment {
     margin-left: 2rem;
   }
-}
+}/*# sourceMappingURL=VideoDescription.css.map */
