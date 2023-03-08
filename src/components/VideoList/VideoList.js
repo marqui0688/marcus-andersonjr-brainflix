@@ -1,12 +1,17 @@
 import "./VideoList.scss";
 
-function VideoList({ videoFiles }) {
+function VideoList({ videoList, handleOnClick }) {
+  console.log(videoList);
   return (
     <>
       <p className="video-list__subheader">NEXT VIDEOS</p>
-      {videoFiles.map((video) => {
+      {videoList.map((video) => {
         return (
-          <div key={video.id} className="video-list__container">
+          <div
+            onClick={(e) => handleOnClick(e, video.id)}
+            key={video.id}
+            className="video-list__container"
+          >
             <img src={video.image} className="video-list__image" />
             <div class="author-container">
               <p className="video-list__title"> {video.title} </p>

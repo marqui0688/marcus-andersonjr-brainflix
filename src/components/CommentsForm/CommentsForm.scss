@@ -3,6 +3,9 @@
 
 .form-container {
   display: flex;
+  @include tablet {
+    position: relative;
+  }
 
   &__header {
     font-size: 0.8rem;
@@ -50,6 +53,9 @@
       font-size: 0.8rem;
       margin-left: 2rem;
       margin-bottom: 1rem;
+      position: absolute;
+      right: 3rem;
+      top: 70rem;
     }
   }
 }

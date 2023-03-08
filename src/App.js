@@ -11,12 +11,17 @@ import CommentDisplay from "./components/CommentDisplay/CommentDisplay";
 import VideoList from "./components/VideoList/VideoList";
 import "./assets/styles/partials/global.scss";
 
-
 function App() {
   const [featuredVideo, setFeaturedVideo] = useState(videoDetails[0]);
-  const [videoList, setVideoList] = useState(videoFiles);
+  const [videoList, setVideoList] = useState(videoFiles.slice(1));
+  const handleOnClick = (e, id) => {
+    e.preventDefault();
+    const newVideoList = videoFiles.filter((video) => video.id !== id);
+    const newFeaturedVideo = videoDetails.find((video) => video.id === id);
+    setFeaturedVideo(newFeaturedVideo);
+    setVideoList(newVideoList);
+  };
 
-  console.log(videoDetails);
   return (
     <div className="App">
       <Header />
@@ -30,7 +35,7 @@ function App() {
       <VideoDescription mainVideoDescription={featuredVideo.description} />
       <CommentsForm />
       <CommentDisplay featuredVideoComments={featuredVideo.comments} />
-      <VideoList videoFiles={videoFiles} />
+      <VideoList handleOnClick={handleOnClick} videoList={videoList} />
     </div>
   );
 }
