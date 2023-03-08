@@ -11,6 +11,9 @@
   @include tablet {
     margin-left: 2rem;
   }
+  @include desktop {
+    position: relative;
+  }
 }
 
 .comment-display__heading {
@@ -25,18 +28,33 @@
   border-radius: 50%;
   border: solid 1px #afafaf;
   margin-top: 1rem;
+  @include desktop {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
 .comment-display__name {
   font-weight: 600;
   font-size: 0.8rem;
   margin-top: 1.3rem;
   margin-left: 0.5rem;
+  @include desktop {
+    margin-left: 1.5rem;
+  }
 }
 .comment-display__comment {
   font-size: 0.8rem;
   text-align: left;
   margin: 0 0.5rem 0 2.6rem;
+  @include desktop {
+    font-size: 0.8rem;
+    text-align: left;
+    margin: 0 0.5rem 0 4rem;
+    position: absolute;
+    top: 3rem;
+  }
 }
+
 .comment-display__date {
   font-size: 0.8rem;
   position: absolute;

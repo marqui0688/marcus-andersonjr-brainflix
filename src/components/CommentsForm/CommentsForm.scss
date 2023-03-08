@@ -54,8 +54,8 @@
       margin-left: 2rem;
       margin-bottom: 1rem;
       position: absolute;
-      right: 3rem;
-      top: 70rem;
+      right: 5rem;
+      top: 52.5rem;
     }
   }
 }
@@ -86,5 +86,13 @@
     margin-left: 1rem;
     margin-bottom: 1rem;
     width: 50%;
+    @include desktop {
+      height: 2.5rem;
+      border: solid 1px #afafaf;
+      border-radius: 0.2rem;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      width: 50%;
+    }
   }
 }

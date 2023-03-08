@@ -71,6 +71,9 @@
       object-fit: cover;
       margin-top: 1rem;
       margin-left: 33rem;
+      @include desktop {
+        margin-left: 59rem;
+      }
     }
   }
 }
@@ -92,5 +95,12 @@
     position: absolute;
     right: 6rem;
     margin-top: 1rem;
+    @include desktop {
+      width: 15%;
+      height: 3.2rem;
+      position: absolute;
+      right: 14rem;
+      margin-top: 1rem;
+    }
   }
 }
