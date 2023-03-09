@@ -1,15 +1,17 @@
 import "./VideoHighlights.scss";
 
-function VideoHighlights(props) {
+function VideoHighlights({ featuredVideo }) {
+  const { image, video, title } = featuredVideo;
+
   return (
     <section>
       <video
         className="video-container"
         controls
-        poster={props.videoHighlighted.image}
-        src={props.videoHighlighted.video}
+        poster={image}
+        src={video}
       ></video>
-      <h1 className="highlights-title">BMX Rampage: 2021 Highlights</h1>
+      <h1 className="highlights-title">{title}</h1>
     </section>
   );
 }

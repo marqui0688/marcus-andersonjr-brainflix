@@ -14,6 +14,7 @@ const formatDate = (timestamp) => {
 };
 
 function VideoViews({ author, views, date, likes }) {
+  console.log(views);
   return (
     <div className="views-container">
       <div className="video-views">
@@ -23,7 +24,7 @@ function VideoViews({ author, views, date, likes }) {
       </div>
 
       <div className="video-likes">
-        <p className="video-likes__date">{formatDate(views.timestamp)}</p>
+        <p className="video-likes__date">{formatDate(views)}</p>
         <img className="video-likes__icon" src={viewsLikes} alt="views like" />
         <p className="video-views__counter">{likes}</p>
       </div>

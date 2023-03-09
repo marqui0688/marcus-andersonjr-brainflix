@@ -1,0 +1,68 @@
+import { useState, useEffect } from "react";
+import "./Home.scss";
+import VideoHighlights from "../components/VideoHighlights/VideoHighlights";
+import VideoViews from "../components/VideoViews/VideoViews";
+import VideoDescription from "../components/VideoDescription/VideoDescription";
+import CommentsForm from "../components/CommentsForm/CommentsForm";
+import CommentDisplay from "../components/CommentDisplay/CommentDisplay";
+import VideoList from "../components/VideoList/VideoList";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+
+function Home() {
+  const [featuredVideo, setFeaturedVideo] = useState({ comments: [] });
+  const [videoList, setVideoList] = useState([]);
+
+  const { videoId } = useParams();
+
+  console.log(videoId);
+
+  const handleOnClick = (e, id) => {
+    e.preventDefault();
+    const newVideoList = videoList.filter((video) => video.id !== id);
+    setVideoList(newVideoList);
+  };
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
+      )
+      .then((response) => {
+        setVideoList(response.data);
+        axios
+          .get(
+            `https://project-2-api.herokuapp.com/videos/${
+              videoId || response.data[0].id
+            }?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
+          )
+          .then((response) => {
+            setFeaturedVideo(response.data);
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [videoId]);
+
+  return (
+    <div className="Home">
+      <VideoHighlights featuredVideo={featuredVideo} />
+      <VideoViews
+        author={featuredVideo.channel}
+        views={featuredVideo.views}
+        date={featuredVideo.timestamp}
+        likes={featuredVideo.likes}
+      />
+      <VideoDescription mainVideoDescription={featuredVideo.description} />
+      <CommentsForm />
+      <CommentDisplay featuredVideoComments={featuredVideo.comments} />
+      <VideoList handleOnClick={handleOnClick} videoList={videoList} />
+    </div>
+  );
+}
+
+export default Home;

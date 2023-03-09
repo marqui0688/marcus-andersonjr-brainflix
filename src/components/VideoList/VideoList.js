@@ -1,14 +1,14 @@
+import { NavLink } from "react-router-dom";
 import "./VideoList.scss";
 
-function VideoList({ videoList, handleOnClick }) {
-  console.log(videoList);
+function VideoList({ videoList }) {
   return (
     <>
       <p className="video-list__subheader">NEXT VIDEOS</p>
       {videoList.map((video) => {
         return (
-          <div
-            onClick={(e) => handleOnClick(e, video.id)}
+          <NavLink
+            to={`/videos/${video.id}`}
             key={video.id}
             className="video-list__container"
           >
@@ -17,7 +17,7 @@ function VideoList({ videoList, handleOnClick }) {
               <p className="video-list__title"> {video.title} </p>
               <p className="video-list__author"> {video.channel} </p>
             </div>
-          </div>
+          </NavLink>
         );
       })}
     </>

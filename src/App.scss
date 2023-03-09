@@ -1,5 +1,5 @@
-@use "./variables" as *;
-@use "./mixins" as *;
+@use "../src/assets/styles/partials/variables" as *;
+@use "../src/assets/styles/partials/mixins" as *;
 
 * {
   margin: 0;
