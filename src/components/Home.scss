@@ -104,3 +104,18 @@
     }
   }
 }
+
+.home {
+  @include desktop {
+    &__wrapper {
+      display: flex;
+    }
+  }
+
+  @include desktop {
+    &__left-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use "../../assets/styles/partials/mixins" as *;
+@use "../../assets/styles/partials/variables" as *;
+
+.video-upload {
+  &__header {
+    font-weight: 600;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    border-top: 1px solid #afafaf;
+    margin-bottom: 2rem;
+
+    margin-bottom: 1.2rem;
+  }
+  &__subheader {
+    margin-left: 1rem;
+    font-size: 0.8rem;
+    color: #afafaf;
+    margin-bottom: 0.2rem;
+  }
+  &__img {
+    width: 18.36rem;
+    height: 9.26rem;
+    object-fit: cover;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.form-container {
+  &__title {
+    height: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid;
+    border-width: thin;
+    border-color: #afafaf;
+    border-radius: 0.2rem;
+    margin-bottom: 1.3rem;
+  }
+  &__video {
+    height: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid;
+    border-width: thin;
+    border-color: #afafaf;
+    border-radius: 0.2rem;
+  }
+}

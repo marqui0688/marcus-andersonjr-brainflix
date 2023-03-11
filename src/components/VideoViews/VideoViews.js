@@ -13,22 +13,29 @@ const formatDate = (timestamp) => {
   return formattedDate;
 };
 
-function VideoViews({ author, views, date, likes }) {
+function VideoViews({ author, views, date, likes, title }) {
   console.log(views);
   return (
-    <div className="views-container">
-      <div className="video-views">
-        <p className="video-views__author">By {author}</p>
-        <img className="video-views__icon" src={viewsIcon} alt="views icon" />
-        <p className="video-views__counter">{views}</p>
-      </div>
+    <>
+      <h1 className="description-container__title">{title}</h1>
+      <div className="views-container">
+        <div className="video-views">
+          <p className="video-views__author">By {author}</p>
+          <img className="video-views__icon" src={viewsIcon} alt="views icon" />
+          <p className="video-views__counter">{views}</p>
+        </div>
 
-      <div className="video-likes">
-        <p className="video-likes__date">{formatDate(views)}</p>
-        <img className="video-likes__icon" src={viewsLikes} alt="views like" />
-        <p className="video-views__counter">{likes}</p>
+        <div className="video-likes">
+          <p className="video-likes__date">{formatDate(views)}</p>
+          <img
+            className="video-likes__icon"
+            src={viewsLikes}
+            alt="views like"
+          />
+          <p className="video-views__counter">{likes}</p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

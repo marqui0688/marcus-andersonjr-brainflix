@@ -1,12 +1,27 @@
 import brainflixLogo from "../../assets/Images/Logo/BrainFlix-logo.svg";
 import mohanAvatar from "../../assets/Images/Mohan-muruge.jpg";
+import { useNavigate } from "react-router-dom";
 
 import "./Header.scss";
 
 function Header() {
+  const navigate = useNavigate();
+
+  const onClickUploadHandler = () => {
+    navigate("/upload");
+  };
+
+  const onClickHomeHandler = () => {
+    navigate("/");
+  };
   return (
     <header className="header">
-      <img className="header__logo" src={brainflixLogo} alt="Brainflix-logo" />
+      <img
+        onClick={onClickHomeHandler}
+        className="header__logo"
+        src={brainflixLogo}
+        alt="Brainflix-logo"
+      />
 
       <div className="search-wrapper">
         <input
@@ -21,8 +36,11 @@ function Header() {
           className="search-wrapper__avatar"
         />
       </div>
-
-      <button className="upload-button">UPLOAD</button>
+      <div className="video-list__container">
+        <button onClick={onClickUploadHandler} className="upload-button">
+          UPLOAD
+        </button>
+      </div>
     </header>
   );
 }

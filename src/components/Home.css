@@ -1,6 +1,4 @@
-.header {
-  margin-bottom: 2rem rem;
-}
+@charset "UTF-8";
 @media (min-width: 769px) {
   .header {
     display: flex;
@@ -9,15 +7,9 @@
     position: relative;
   }
 }
-@media (min-width: 769px) and (min-width: 1280px) {
-  .header {
-    margin-bottom: 1rem;
-  }
-}
 .header__logo {
   height: 3rem;
   width: 8rem;
-  margin-left: 5.75rem;
 }
 @media (min-width: 769px) {
   .header__logo {
@@ -27,13 +19,14 @@
     margin-left: 1rem;
   }
 }
+
 .search-wrapper {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 .search-wrapper__bar {
-  background-image: url(../../assets/Images/Icons/search.svg);
+  background-image: url(../assets/Images/Icons/search.svg);
   background-position: 5% 50%;
   background-repeat: no-repeat;
   height: 1rem;
@@ -48,7 +41,7 @@
 }
 @media (min-width: 769px) {
   .search-wrapper__bar {
-    background-image: url(../../assets/Images/Icons/search.svg);
+    background-image: url(http://localhost:3001/static/media/search.b2de04b….svg);
     background-position: 5% 50%;
     background-repeat: no-repeat;
     height: 2rem;
@@ -60,24 +53,6 @@
     padding: 0.5rem;
     margin-bottom: 1rem;
     margin-right: 17rem;
-    margin-top: 1rem;
-    position: absolute;
-  }
-}
-@media (min-width: 769px) and (min-width: 1280px) {
-  .search-wrapper__bar {
-    background-image: url(../../assets/Images/Icons/search.svg);
-    background-position: 5% 50%;
-    background-repeat: no-repeat;
-    height: 2rem;
-    width: 30%;
-    border-radius: 0.3rem;
-    border-color: #e1e1e1;
-    border-width: thin;
-    text-indent: 1.5rem;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    /* margin-right: 0rem; */
     margin-top: 1rem;
     position: absolute;
   }
@@ -114,12 +89,10 @@
   border: none;
   color: white;
   border-radius: 0.3rem;
-  background-image: url(../../assets/Images/Icons/upload.svg);
+  background-image: url(../assets/Images/Icons/upload.svg);
   background-position: left;
   background-repeat: no-repeat;
   border-width: thin;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
 }
 @media (min-width: 769px) {
   .upload-button {
@@ -132,10 +105,22 @@
 }
 @media (min-width: 769px) and (min-width: 1280px) {
   .upload-button {
-    width: 13%;
+    width: 15%;
     height: 3.2rem;
     position: absolute;
     right: 14rem;
     margin-top: 1rem;
   }
-}/*# sourceMappingURL=Header.css.map */
+}
+
+@media (min-width: 1280px) {
+  .home__wrapper {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .home__left-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=Home.css.map */

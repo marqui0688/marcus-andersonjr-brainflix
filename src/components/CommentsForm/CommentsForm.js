@@ -16,8 +16,8 @@ function CommentsForm() {
           className="form-container__input"
           placeholder="Add a new comment"
         ></input>
+        <button className="form-container__btn">COMMENT</button>
       </form>
-      <button className="form-container__btn">COMMENT</button>
     </>
   );
 }

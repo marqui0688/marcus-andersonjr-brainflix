@@ -7,6 +7,7 @@
   color: #afafaf;
   font-weight: 400;
   margin-left: 1rem;
+  margin-top: 1.5rem;
   @include tablet {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -55,4 +56,11 @@
 }
 .author-container {
   display: block;
+}
+
+.video-list__sidebar {
+  @include desktop {
+    border: solid 1px #afafaf;
+    border-bottom: 0;
+  }
 }

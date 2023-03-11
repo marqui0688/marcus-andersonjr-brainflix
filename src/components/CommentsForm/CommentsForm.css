@@ -1,6 +1,12 @@
 @charset "UTF-8";
 .form-container {
   display: flex;
+  flex-direction: column;
+}
+@media (min-width: 769px) {
+  .form-container {
+    position: relative;
+  }
 }
 .form-container__header {
   font-size: 0.8rem;
@@ -23,7 +29,7 @@
   }
 }
 .form-container__btn {
-  width: 70%;
+  width: 90%;
   height: 2.2rem;
   background-color: #0095ff;
   border: none;
@@ -36,6 +42,7 @@
   font-size: 0.8rem;
   margin-left: 2rem;
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 @media (min-width: 769px) {
   .form-container__btn {
@@ -50,17 +57,23 @@
     background-repeat: no-repeat;
     border-width: thin;
     font-size: 0.8rem;
-    margin-left: 2rem;
+    margin-left: 32rem;
     margin-bottom: 1rem;
+    position: absolute;
+  }
+}
+@media (min-width: 769px) and (min-width: 1280px) {
+  .form-container__btn {
+    margin-left: 40rem;
   }
 }
 
 .form-header {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: #afafaf;
   text-align: left;
-  margin-bottom: 0;
-  margin-left: 4rem;
+  margin-bottom: 0.2rem;
+  margin-left: 1rem;
 }
 @media (min-width: 769px) {
   .form-header {
@@ -79,6 +92,16 @@
 @media (min-width: 769px) {
   .form-container__input {
     width: 70%;
+    height: 2.5rem;
+    border: solid 1px #afafaf;
+    border-radius: 0.2rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    width: 50%;
+  }
+}
+@media (min-width: 769px) and (min-width: 1280px) {
+  .form-container__input {
     height: 2.5rem;
     border: solid 1px #afafaf;
     border-radius: 0.2rem;

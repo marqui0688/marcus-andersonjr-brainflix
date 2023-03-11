@@ -4,6 +4,12 @@
 .video-container {
   height: 56vw;
   margin-top: 2rem;
+  @include desktop {
+    height: 39vw;
+    margin-top: 2rem;
+    width: 100%;
+    background-color: black;
+  }
 }
 
 .highlights-title {
@@ -17,4 +23,8 @@
     margin: 1rem 0 1rem 2rem;
     font-weight: 600;
   }
+}
+
+.video-wrapper {
+  background-color: black;
 }

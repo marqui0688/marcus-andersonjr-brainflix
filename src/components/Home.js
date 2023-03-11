@@ -17,12 +17,6 @@ function Home() {
 
   console.log(videoId);
 
-  const handleOnClick = (e, id) => {
-    e.preventDefault();
-    const newVideoList = videoList.filter((video) => video.id !== id);
-    setVideoList(newVideoList);
-  };
-
   useEffect(() => {
     axios
       .get(
@@ -51,16 +45,22 @@ function Home() {
   return (
     <div className="Home">
       <VideoHighlights featuredVideo={featuredVideo} />
-      <VideoViews
-        author={featuredVideo.channel}
-        views={featuredVideo.views}
-        date={featuredVideo.timestamp}
-        likes={featuredVideo.likes}
-      />
-      <VideoDescription mainVideoDescription={featuredVideo.description} />
-      <CommentsForm />
-      <CommentDisplay featuredVideoComments={featuredVideo.comments} />
-      <VideoList handleOnClick={handleOnClick} videoList={videoList} />
+      <div className="home__wrapper">
+        <div className="home__left-wrapper">
+          <VideoViews
+            title={featuredVideo.title}
+            author={featuredVideo.channel}
+            views={featuredVideo.views}
+            date={featuredVideo.timestamp}
+            likes={featuredVideo.likes}
+          />
+          <VideoDescription mainVideoDescription={featuredVideo.description} />
+
+          <CommentsForm />
+          <CommentDisplay featuredVideoComments={featuredVideo.comments} />
+        </div>
+        <VideoList videoList={videoList} featuredVideoid={featuredVideo.id} />
+      </div>
     </div>
   );
 }

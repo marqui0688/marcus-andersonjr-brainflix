@@ -4,6 +4,7 @@
   color: #afafaf;
   font-weight: 400;
   margin-left: 1rem;
+  margin-top: 1.5rem;
 }
 @media (min-width: 769px) {
   .video-list__subheader {
@@ -56,4 +57,11 @@
 
 .author-container {
   display: block;
+}
+
+@media (min-width: 1280px) {
+  .video-list__sidebar {
+    border: solid 1px #afafaf;
+    border-bottom: 0;
+  }
 }/*# sourceMappingURL=VideoList.css.map */
