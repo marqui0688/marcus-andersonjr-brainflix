@@ -1,10 +1,17 @@
+@charset "UTF-8";
 .video-upload__header {
   font-weight: 600;
   padding-top: 2rem;
   padding-left: 1rem;
   border-top: 1px solid #afafaf;
   margin-bottom: 2rem;
-  margin-bottom: 1.2rem;
+}
+@media (min-width: 769px) {
+  .video-upload__header {
+    border-bottom: solid 1px #afafaf;
+    font-size: 2.8rem;
+    padding-bottom: 2rem;
+  }
 }
 .video-upload__subheader {
   margin-left: 1rem;
@@ -13,7 +20,7 @@
   margin-bottom: 0.2rem;
 }
 .video-upload__img {
-  width: 18.36rem;
+  width: 17.36rem;
   height: 9.26rem;
   -o-object-fit: cover;
      object-fit: cover;
@@ -31,6 +38,7 @@
   border-color: #afafaf;
   border-radius: 0.2rem;
   margin-bottom: 1.3rem;
+  width: 87%;
 }
 .form-container__video {
   height: 6rem;
@@ -40,4 +48,84 @@
   border-width: thin;
   border-color: #afafaf;
   border-radius: 0.2rem;
+  margin-bottom: 1rem;
+  width: 87%;
+}
+
+.publish-button {
+  width: 90%;
+  height: 3rem;
+  background-color: #0095ff;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  background-image: url(../../assets/Images/Icons/publish.svg);
+  background-position: left;
+  background-repeat: no-repeat;
+  border-width: thin;
+  font-size: 0.8rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+@media (min-width: 769px) {
+  .publish-button {
+    width: 12%;
+    height: 3rem;
+    background-color: #0095ff;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    background-image: url(http://localhost:3000/static/media/publish.9004aa7….svg);
+    background-position: left;
+    background-repeat: no-repeat;
+    border-width: thin;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 31rem;
+    font-weight: 500;
+  }
+}
+
+.cancel-button {
+  width: 90%;
+  height: 3rem;
+  background-color: white;
+  border: none;
+  color: white;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  background-position: left;
+  background-repeat: no-repeat;
+  border-width: thin;
+  font-size: 0.8rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  color: #0095ff;
+}
+@media (min-width: 769px) {
+  .cancel-button {
+    width: 12%;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    color: white;
+    border-radius: 0.3rem;
+    font-weight: 500;
+    background-position: left;
+    background-repeat: no-repeat;
+    border-width: thin;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    color: #0095ff;
+  }
+}
+
+@media (min-width: 1280px) {
+  .desktop-wrapper {
+    display: flex;
+  }
 }/*# sourceMappingURL=VideoUpload.css.map */
