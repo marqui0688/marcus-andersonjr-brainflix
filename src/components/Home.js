@@ -19,14 +19,13 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4"
-      )
+      .get("http://localhost:8080/videos")
       .then((response) => {
+        console.log(response.data);
         setVideoList(response.data);
         axios
           .get(
-            `https://project-2-api.herokuapp.com/videos/${
+            `http://localhost:8080/videos/${
               videoId || response.data[0].id
             }?api_key=e0eea5f0-0f8c-4b54-9fc4-ff50843766d4`
           )
