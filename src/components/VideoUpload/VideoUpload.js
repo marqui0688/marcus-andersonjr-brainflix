@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
 import videoUploadPreview from "../../assets/Images/Upload-video-preview.jpg";
 
 import "./VideoUpload.scss";
 
 function VideoUpload() {
+  const onClickVideoUploadHandler = () => {
+    alert("upload successful");
+  };
   return (
     <>
       {/* /////////// UPLOAD VIDEO SECTION //////////// */}
@@ -19,7 +21,7 @@ function VideoUpload() {
           />
         </div>
         {/* //////////// VIDEO FORM ///////////////// */}
-        <form className="form-container">
+        <form method="SUBMIT" action="#" id="id" className="form-container">
           <p className="form-header">TITLE YOUR VIDEO</p>
           <input
             className="form-container__title"
@@ -32,7 +34,9 @@ function VideoUpload() {
           ></input>
         </form>
 
-        <button className="publish-button">PUBLISH</button>
+        <button onClick={onClickVideoUploadHandler} className="publish-button">
+          PUBLISH
+        </button>
         <button className="cancel-button">CANCEL</button>
       </section>
     </>

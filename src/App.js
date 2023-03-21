@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "./App.css";
 import Header from "../src/components/Header/Header";
-import "./assets/styles/partials/global.scss";
+import "./styles/partials/global.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import VideoUpload from "../src/components/VideoUpload/VideoUpload";

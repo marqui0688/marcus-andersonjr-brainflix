@@ -1,5 +1,5 @@
-@use "../../assets/styles/partials/mixins" as *;
-@use "../../assets/styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
 
 .header {
   margin-bottom: 0.5rem;
@@ -26,8 +26,6 @@
       width: 9rem;
       margin-top: 0.5rem;
       margin-left: 1rem;
-      @include desktop {
-      }
     }
   }
 }
@@ -51,35 +49,14 @@
     margin-bottom: 1rem;
     margin-right: 1rem;
     @include tablet {
-      background-image: url(../../assets/Images/Icons/search.svg);
-      background-position: 5% 50%;
-      background-repeat: no-repeat;
       height: 2rem;
       width: 30%;
-      border-radius: 0.3rem;
-      border-color: #e1e1e1;
-      border-width: thin;
-      text-indent: 1.5rem;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
+
       margin-right: 17rem;
       margin-top: 1rem;
       position: absolute;
       @include desktop {
-        background-image: url(../../assets/Images/Icons/search.svg);
-        background-position: 5% 50%;
-        background-repeat: no-repeat;
-        height: 2rem;
-        width: 30%;
-        border-radius: 0.3rem;
-        border-color: #e1e1e1;
-        border-width: thin;
-        text-indent: 1.5rem;
-        padding: 0.5rem;
-        margin-bottom: 1rem;
-        /* margin-right: 0rem; */
-        margin-top: 1rem;
-        position: absolute;
+        background-position: 1% 50%;
       }
     }
   }
@@ -91,9 +68,7 @@
     @include tablet {
       height: 3rem;
       width: 3rem;
-      border-radius: 70%;
       margin-right: 2.5rem;
-      object-fit: cover;
       margin-top: 1rem;
       margin-left: 33rem;
       @include desktop {

@@ -15,8 +15,6 @@ function Home() {
 
   const { videoId } = useParams();
 
-  console.log(videoId);
-
   useEffect(() => {
     axios
       .get("http://localhost:8080/videos")

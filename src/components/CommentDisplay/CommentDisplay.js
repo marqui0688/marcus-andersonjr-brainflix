@@ -1,4 +1,4 @@
-import mohanAvatar from "../../assets/Images/Mohan-muruge.jpg";
+import mohanAvatar from "../../../src/assets/Images/Mohan-muruge.jpg";
 import "./CommentDisplay.scss";
 
 const formatDate = (timestamp) => {
@@ -14,7 +14,7 @@ const formatDate = (timestamp) => {
 function CommentDisplay({ featuredVideoComments }) {
   return featuredVideoComments.map((comment) => {
     return (
-      <section className="comment-display__container">
+      <section key={comment.id} className="comment-display__container">
         <div className="comment-display__heading">
           <div className="comment-display__avatar"></div>
           <p className="comment-display__name">{comment.name}</p>

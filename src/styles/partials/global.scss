@@ -1,6 +1,6 @@
 @use "./typography.scss" as *;
-@use "./mixins" as *;
-@use "./variables" as *;
+@use "./mixins.scss" as *;
+@use "./variables.scss" as *;
 
 body {
   font-family: "Avenir", sans-serif;

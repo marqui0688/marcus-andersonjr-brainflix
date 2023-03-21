@@ -14,7 +14,6 @@ const formatDate = (timestamp) => {
 };
 
 function VideoViews({ author, views, date, likes, title }) {
-  console.log(views);
   return (
     <>
       <h1 className="description-container__title">{title}</h1>
